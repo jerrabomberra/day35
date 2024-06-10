@@ -1,9 +1,13 @@
 import requests
 from ISO3166 import ISO3166
 
-API_KEY : str ='8c928036410e6f5ffc2690b3c94b81b8'
-lat : float = 13.7740
-long : float= 100.5410
+# abloom is at 13.773648654025774, 100.54110921045502
+
+API_KEY: str = '8c928036410e6f5ffc2690b3c94b81b8'
+# lat: float = 13.7736
+lat = 13.773648654025774
+# long: float = 100.5411
+long = 100.54110921045502
 URL = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={API_KEY}&units=metric'
 
 response = requests.get(URL)
@@ -25,5 +29,6 @@ def print_weather():
         print(f'Description: {desc}')
     else:
         print('Error fetching weather data')
+
 
 print_weather()
