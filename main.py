@@ -8,7 +8,8 @@ API_KEY: str = '8c928036410e6f5ffc2690b3c94b81b8'
 lat = 13.773648654025774
 # long: float = 100.5411
 long = 100.54110921045502
-URL = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={API_KEY}&units=metric'
+URL = f'https://api.openweathermap.org/data/2.5/\
+weather?lat={lat}&lon={long}&appid={API_KEY}&units=metric'
 
 response = requests.get(URL)
 
